@@ -1,11 +1,39 @@
-# Sample Snack app
+# Tela de Cadastro
 
-Open the `App.js` file to start writing some code. You can preview the changes directly on your phone or tablet by scanning the **QR code** or use the iOS or Android emulators. When you're done, click **Save** and share the link!
+## Sobre o projeto
 
-When you're ready to see everything that Expo provides (or if you want to use your own editor) you can **Download** your project and use it with [expo cli](https://docs.expo.dev/get-started/installation/#expo-cli)).
+App simples com telas de login e cadastro, desenvolvido em React Native para estudos de navegação.
 
-All projects created in Snack are publicly available, so you can easily share the link to this project via link, or embed it on a web page with the `<>` button.
+## Telas do app
 
-If you're having problems, you can tweet to us [@expo](https://twitter.com/expo) or ask in our [forums](https://forums.expo.dev/c/expo-dev-tools/61) or [Discord](https://chat.expo.dev/).
+- **Login** - Tela inicial para entrar no app
+- **Cadastro** - Tela para criar nova conta
+- **Busca** - Tela de pesquisa
+- **ListaCompleta** - Tela com lista de itens
 
-Snack is Open Source. You can find the code on the [GitHub repo](https://github.com/expo/snack).
+## Como rodar
+
+1. Acesse: https://snack.expo.dev/@kauamoreira/tela-de-cadastro
+2. Escolha uma opção de preview (Web, Android ou iOS)
+3. Teste a navegação entre as telas
+
+## Tecnologias usadas
+
+- React Native
+- Expo
+- React Navigation
+
+## Estrutura de arquivos
+App.js # Configura as rotas do app
+Login.js # Tela de login
+Cadastro.js # Tela de cadastro
+Busca.js # Tela de busca
+ListaCompleta.js # Tela de listagem
+
+## Autor
+
+Kauã Moreira
+
+## Obs
+
+Projeto acadêmico - uso livre para estudos.
