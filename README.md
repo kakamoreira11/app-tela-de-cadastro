@@ -24,11 +24,16 @@ App simples com telas de login e cadastro, desenvolvido em React Native para est
 - React Navigation
 
 ## Estrutura de arquivos
-App.js # Configura as rotas do app
-Login.js # Tela de login
-Cadastro.js # Tela de cadastro
-Busca.js # Tela de busca
-ListaCompleta.js # Tela de listagem
+# Configura as rotas do app
+App.js
+ # Tela de login
+Login.js
+# Tela de cadastro
+Cadastro.js
+# Tela de busca
+Busca.js 
+# Tela de listagem
+ListaCompleta.js 
 
 ## Autor
 
