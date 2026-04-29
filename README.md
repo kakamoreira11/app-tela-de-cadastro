@@ -1,44 +1,54 @@
-# Tela de Cadastro
+# 📱 Tela de Cadastro - App de Navegação React Native
 
-## Sobre o projeto
+## 📌 Sobre o Projeto
 
-App simples com telas de login e cadastro, desenvolvido em React Native para estudos de navegação.
+Este é um projeto acadêmico desenvolvido em **React Native** utilizando a plataforma **Expo Snack**. O aplicativo implementa uma estrutura de navegação entre telas, com foco em uma interface de **Login** e **Cadastro de usuários**. Ele serve como base para estudos de navegação em pilha (Stack Navigation) e criação de telas autenticáveis.
 
-## Telas do app
+## 🧱 Estrutura do Projeto
 
-- **Login** - Tela inicial para entrar no app
-- **Cadastro** - Tela para criar nova conta
-- **Busca** - Tela de pesquisa
-- **ListaCompleta** - Tela com lista de itens
+O aplicativo é composto pelas seguintes telas (screens):
 
-## Como rodar
+| Tela | Componente | Descrição |
+|------|------------|-----------|
+| **Login** | `Login.js` | Tela inicial para autenticação do usuário. |
+| **Cadastro** | `Cadastro.js` | Tela para registro de novos usuários. |
+| **Busca** | `Busca.js` | Tela de pesquisa (funcionalidade a ser implementada). |
+| **ListaCompleta** | `ListaCompleta.js` | Tela para exibir uma lista de itens/usuários. |
 
-1. Acesse: https://snack.expo.dev/@kauamoreira/tela-de-cadastro
-2. Escolha uma opção de preview (Web, Android ou iOS)
-3. Teste a navegação entre as telas
+## 🧭 Navegação
 
-## Tecnologias usadas
+A navegação entre as telas é gerenciada pelo **React Navigation** na versão nativa (stack). O código no arquivo `App.js` define o seguinte roteamento:
 
-- React Native
-- Expo
-- React Navigation
+- **Rota inicial**: `Login` (header oculto)
+- Transições possíveis:
+  - `Login` → `Cadastro`
+  - `Login` → `Busca` (após autenticação)
+  - `Cadastro` → `ListaCompleta` (após cadastro bem-sucedido)
 
-## Estrutura de arquivos
-# Configura as rotas do app
-App.js
- # Tela de login
-Login.js
-# Tela de cadastro
-Cadastro.js
-# Tela de busca
-Busca.js 
-# Tela de listagem
-ListaCompleta.js 
+```javascript
+// App.js (resumo)
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Login from './Login';
+import Cadastro from './Cadastro';
+import Busca from './Busca';
+import ListaCompleta from './ListaCompleta';
 
-## Autor
+const Stack = createNativeStackNavigator();
 
-Kauã Moreira
-
-## Obs
-
-Projeto acadêmico - uso livre para estudos.
+export default function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Login">
+        <Stack.Screen 
+          name="Login" 
+          component={Login} 
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen name="Cadastro" component={Cadastro} />
+        <Stack.Screen name="Busca" component={Busca} />
+        <Stack.Screen name="ListaCompleta" component={ListaCompleta} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
